@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_Microchip_ATtiny:ATtiny13A-SSU U3
-U 1 1 600AD815
-P 4550 1600
-F 0 "U3" H 4020 1646 50  0000 R CNN
-F 1 "ATtiny13A-SSU" H 4020 1555 50  0000 R CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4550 1600 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc8126.pdf" H 4550 1600 50  0001 C CNN
-	1    4550 1600
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:LED D14
 U 1 1 600B6E54
 P 8200 3250
@@ -1584,4 +1573,80 @@ F 12 "Active" H 1550 3900 60  0001 L CNN "Status"
 	1    1350 2700
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:AVR-ISP-6 J2
+U 1 1 600F0641
+P 2850 2650
+F 0 "J2" H 2521 2746 50  0000 R CNN
+F 1 "AVR-ISP-6" H 2521 2655 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical_SMD" V 2600 2700 50  0001 C CNN
+F 3 " ~" H 1575 2100 50  0001 C CNN
+	1    2850 2650
+	1    0    0    -1  
+$EndComp
+Text GLabel 2750 2050 1    50   Input ~ 0
++5V
+Wire Wire Line
+	2750 2050 2750 2150
+Text GLabel 2750 3150 3    50   Input ~ 0
+GND
+Wire Wire Line
+	2750 3050 2750 3150
+Text GLabel 5200 1800 3    50   Input ~ 0
+RESET
+Text GLabel 3350 2750 2    50   Input ~ 0
+RESET
+Wire Wire Line
+	3350 2750 3250 2750
+Text GLabel 3350 2450 2    50   Input ~ 0
+MISO
+Text GLabel 3350 2550 2    50   Input ~ 0
+MOSI
+Text GLabel 3350 2650 2    50   Input ~ 0
+SCK
+Wire Wire Line
+	3250 2450 3350 2450
+Wire Wire Line
+	3250 2550 3350 2550
+Wire Wire Line
+	3250 2650 3350 2650
+Text GLabel 5650 800  2    50   Input ~ 0
+R
+Text GLabel 5650 900  2    50   Input ~ 0
+G
+Text GLabel 5650 1000 2    50   Input ~ 0
+B
+Text GLabel 5450 1000 0    50   Input ~ 0
+SCK
+Text GLabel 5450 800  0    50   Input ~ 0
+MOSI
+Text GLabel 5450 900  0    50   Input ~ 0
+MISO
+$Comp
+L MCU_Microchip_ATtiny:ATtiny13A-SSU U3
+U 1 1 600AD815
+P 4550 1600
+F 0 "U3" H 4020 1646 50  0000 R CNN
+F 1 "ATtiny13A-SSU" H 4020 1555 50  0000 R CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4550 1600 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc8126.pdf" H 4550 1600 50  0001 C CNN
+	1    4550 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 1000 5650 1000
+Wire Wire Line
+	5450 800  5650 800 
+Wire Wire Line
+	5450 900  5650 900 
+Wire Notes Line
+	2400 1800 2400 3400
+Wire Notes Line
+	2400 3400 3700 3400
+Wire Notes Line
+	3700 3400 3700 1800
+Wire Notes Line
+	3700 1800 2400 1800
+Text Notes 2850 1800 0    50   ~ 0
+ISP Header
 $EndSCHEMATC
